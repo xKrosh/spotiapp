@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of items">
+      <div class="card h-100">
+        <img [src]="item.images | noimages" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <span class="badge bg-success" *ngFor="let artista of item.artists">{{artista.name}}</span>
+          <span class="badge bg-success" *ngFor="let genero of item.genres">{{genero}}</span>
+       </div>
+   </div>
+</div>
